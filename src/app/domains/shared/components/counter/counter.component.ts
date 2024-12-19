@@ -22,7 +22,10 @@ export class CounterComponent {
     console.log('ngOnChanges');
     console.log('-'.repeat(10));
     console.log(changes);
-
+    const duration = changes['duration'];
+    if(duration) {
+      this.doSomeThing();
+    }
   }
 
   ngOnInit() {
@@ -45,4 +48,7 @@ export class CounterComponent {
     console.log('-'.repeat(10));
   }
 
+  doSomeThing() {
+    console.log('change duration');
+  }
 }
