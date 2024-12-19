@@ -24,4 +24,25 @@ export class CounterComponent {
     console.log(changes);
 
   }
+
+  ngOnInit() {
+    // despues de renderizar el componente y se ejecuta una sola vez
+    console.log('ngOnInit');
+    console.log('-'.repeat(10));
+    console.log('duration =>', this.duration);
+    console.log('message =>', this.message);
+  }
+
+  ngAfterViewInit() {
+    // despues del ngOnInit
+    // verificxa si los hijos ya fueron renderizados
+    console.log('ngAfterViewInit');
+    console.log('-'.repeat(10));
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
+    console.log('-'.repeat(10));
+  }
+
 }
